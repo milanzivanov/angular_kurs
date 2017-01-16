@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Adding Angular to the project</title>
+        
+        <!-- Paziti na redosled importa:
+            1. angular.js
+            2. app.js u kome je DEFINISAN modul myFirstModule
+            3. HelloWorldController.js u kome je definisan kontroler HelloWorldController. Mora se uljuÄŤiti posle app.js jer se u okviru HelloWorldController.js preuzima REFERENCA na modul kreiran u app.js radi registracije kontrolera u modulu
+        -->
+
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="app.js"></script>
+        <script src="HelloWorldCotroller.js"></script>
+    </head>
+    <body ng-app="myFirstModule">
+        <h1 ng-controller="HelloWorldController">
+
+            message: {{message}}
+            message length: {{message.length}} <br/>
+
+        </h1>
+    </body>
+</html>
